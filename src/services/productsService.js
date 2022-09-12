@@ -11,7 +11,13 @@ const getProductsById = async (id) => {
   return { type: null, message: product };
 };
 
+const registerProduct = async (name) => {
+  const id = await productsModel.registerProduct(name);
+  return { type: null, message: { id, name } };
+};
+
 module.exports = {
   getProducts,
   getProductsById,
+  registerProduct,
 };
