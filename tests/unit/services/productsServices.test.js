@@ -19,6 +19,12 @@ describe('Tentando a camada Service de Products', function () {
         
     expect(response.message).to.equal(product);
   });
+  it('Retorna um erro caso chame um produto com id inexistente', async function () {
+    sinon.stub(productsModel, 'findById').resolves(null);
+    const response = await productsService.getProductsById(999);
+        
+    expect(response.message).to.equal('Product not found');
+  });
   it('Retorna o produto cadastrado', async function () {
     sinon.stub(productsModel, 'registerProduct').resolves(1);
     const { message } = await productsService.registerProduct("UmProduto");
