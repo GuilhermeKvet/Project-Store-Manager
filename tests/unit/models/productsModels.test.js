@@ -28,5 +28,12 @@ describe('Testando a camada de Model de Products', function () {
 
     expect(result).to.deep.equal(productNotFound);
   });
+  it('Testa a chamada de um produto inexistente', async function () {
+    sinon.stub(connection, 'execute').resolves([{ insertId: 1 }]);
+
+    const result = await productsModel.registerProduct('UmProduto');
+
+    expect(result).to.deep.equal(1);
+  });
   afterEach(sinon.restore);
 });
