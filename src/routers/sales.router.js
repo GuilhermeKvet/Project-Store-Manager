@@ -15,7 +15,13 @@ router.post('/',
 
 router.get('/', salesController.findAll);
 
-router.get('/:id', salesController.findById);
+router.get('/:id', validateIdSale, salesController.findById);
+
+router.put('/:id',
+  validateIdSale,
+  validateExistenceInputsSale,
+  validateExistenceIdProduct,
+  salesController.updateSale);
 
 router.delete('/:id', validateIdSale, salesController.deleteSale);
 

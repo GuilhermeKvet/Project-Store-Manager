@@ -326,12 +326,12 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-14T14:21:53.952Z",
-    "modified": "2022-09-14T14:21:53.968Z",
+    "modified": "2022-09-14T14:53:59.424Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "raw": "[\r\n  {\r\n    \"productId\": 10,\r\n    \"quantity\": 5\r\n  },\r\n  {\r\n    \"productId\": 10,\r\n    \"quantity\": 5\r\n  }\r\n]",
       "form": []
     },
     "tests": []
@@ -370,6 +370,63 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0536617f-4b4e-490e-9e52-0954a78128cc",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales/2222",
+    "url": "localhost:3000/sales/2222",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-09-14T14:47:56.364Z",
+    "modified": "2022-09-14T14:47:56.657Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b1830e48-3dae-46ef-8c33-41b5a22a341f",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales/1",
+    "url": "localhost:3000/sales/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-14T14:48:16.807Z",
+    "modified": "2022-09-14T14:48:16.824Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "4627eac0-2691-4e19-b028-7522e947fa98",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales/1",
+    "url": "localhost:3000/sales",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-14T14:48:45.598Z",
+    "modified": "2022-09-14T15:10:23.810Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  {\n    \"productId\": 1,\n    \"quantity\": 10000\n  }\n]",
       "form": []
     },
     "tests": []
