@@ -1,7 +1,7 @@
 const express = require('express');
 const { salesController } = require('../controllers');
 const {
-  validateExistenceIdSale,
+  validateExistenceIdProduct,
   validateExistenceInputsSale,
 } = require('../middlewares/validateSale');
 
@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post('/',
   validateExistenceInputsSale,
-  validateExistenceIdSale,
+  validateExistenceIdProduct,
   salesController.registerSale);
 
 router.get('/', salesController.findAll);

@@ -1,5 +1,5 @@
 const productModel = require('../models/productsModel');
-const { saleInputsSchema } = require('./validations/schemas');
+const { saleInputsSchema, updateInputProduct } = require('./validations/schemas');
 
 const validateExistenceInputsSale = (req, res, next) => {
   const { error } = saleInputsSchema.validate(req.body);
@@ -10,7 +10,7 @@ const validateExistenceInputsSale = (req, res, next) => {
   return next();
 };
 
-const validateExistenceIdSale = async (req, res, next) => {
+const validateExistenceIdProduct = async (req, res, next) => {
   const sales = await Promise.all(
     req.body.map(async ({ productId }) => productModel.findById(productId)),
   );
@@ -20,7 +20,21 @@ const validateExistenceIdSale = async (req, res, next) => {
   next();
 };
 
+const validateUpdateProduct = async (req, res, next) => {
+  const { name } = req.body;
+  const { id } = req.params;
+  const result = await productModel.findById(id);
+  if (!result) return res.status(404).json({ message: 'Product not found' });
+  const { error } = updateInputProduct.validate({ name });
+  if (error) {
+    return res.status(error.details[0].type === 'any.required' ? 400 : 422)
+      .json({ message: error.message.replace('[0].', '').replace('[1].', '') });
+  }
+  return next();
+};
+
 module.exports = {
-  validateExistenceIdSale,
+  validateExistenceIdProduct,
   validateExistenceInputsSale,
+  validateUpdateProduct,
 };
