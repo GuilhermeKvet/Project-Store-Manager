@@ -1,21 +1,26 @@
-// const validateSale = (req, res, next) => {
-//   const sales = req.body.map(({ productId, quantity }) => {
-//     if (!productId) return res.status(400).json({ message: '"productId" is required' });
-//     if (!quantity && quantity !== 0) {
-//       return res.status(400).json({ message: '"quantity" is required' });
-//     }
-//     if (quantity <= 0) {
-//       return res.status(422).json({ message: '"quantity" must be greater than or equal to 1' });
-//     }
-//     return 1;
-//   });
-//   if (sales.every((sale) => sale === 1)) {
-//     next();
-//   } else {
-//     res.status(500).json({ message: 'Unexpected error' });
-//   }
-// };
+const productModel = require('../models/productsModel');
+const { saleInputsSchema } = require('./validations/schemas');
 
-// module.exports = {
-//   validateSale,
-// };
+const validateExistenceInputsSale = (req, res, next) => {
+  const { error } = saleInputsSchema.validate(req.body);
+  if (error) {
+    return res.status(error.details[0].type === 'any.required' ? 400 : 422)
+      .json({ message: error.message.replace('[0].', '').replace('[1].', '') });
+  }
+  return next();
+};
+
+const validateExistenceIdSale = async (req, res, next) => {
+  const sales = await Promise.all(
+    req.body.map(async ({ productId }) => productModel.findById(productId)),
+  );
+  if (sales.some((sale) => sale === undefined)) {
+    return res.status(404).json({ message: 'Product not found' });
+  }
+  next();
+};
+
+module.exports = {
+  validateExistenceIdSale,
+  validateExistenceInputsSale,
+};
