@@ -28,12 +28,26 @@ describe('Testando a camada de Model de Products', function () {
 
     expect(result).to.deep.equal(productNotFound);
   });
-  it('Testa a chamada de um produto inexistente', async function () {
+  it('Testa o registro de um novo produto', async function () {
     sinon.stub(connection, 'execute').resolves([{ insertId: 1 }]);
 
     const result = await productsModel.registerProduct('UmProduto');
 
     expect(result).to.deep.equal(1);
+  });
+  it('Testa a alteração de um produto', async function () {
+    sinon.stub(connection, 'execute').resolves([{ affectedRows: 1}]);
+
+    const result = await productsModel.updateProduct(1, 'OutroProduto');
+
+    expect(result).to.equal(1);
+  });
+  it('Testa a chamada para deletar um produto', async function () {
+    sinon.stub(connection, 'execute').resolves([{ affectedRows: 1}]);
+
+    const result = await productsModel.deleteProduct(1);
+
+    expect(result).to.equal(1);
   });
   afterEach(sinon.restore);
 });

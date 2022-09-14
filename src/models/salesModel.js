@@ -17,10 +17,11 @@ const insertSale = async () => {
 };
 
 const deleteSale = async (id) => {
-  await connection.execute(
+  const [{ affectedRows }] = await connection.execute(
     'DELETE FROM StoreManager.sales WHERE id = ?',
     [id],
   );
+  return affectedRows;
 };
 
 module.exports = {

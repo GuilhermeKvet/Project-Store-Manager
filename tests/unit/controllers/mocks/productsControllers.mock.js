@@ -19,8 +19,17 @@ const product = {
   "name": "Martelo de Thor"
 };
 
+const productUpdate = [{
+  id: 1,
+  name: 'OutroProduto'
+}]
+
+const findByName = { id: 1, name: 'UmProduto' }
+
 module.exports = {
   newProduct,
   allProducts,
-  product
+  product,
+  productUpdate,
+  findByName
 };

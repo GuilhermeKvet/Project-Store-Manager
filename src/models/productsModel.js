@@ -25,18 +25,19 @@ const registerProduct = async (name) => {
 };
 
 const updateProduct = async (id, name) => {
-  const [result] = await connection.execute(
+  const [{ affectedRows }] = await connection.execute(
     'UPDATE StoreManager.products SET name = ? WHERE id = ?',
     [name, id],
   );
-  return camelize(result);
+  return affectedRows;
 };
 
 const deleteProduct = async (id) => {
-  await connection.execute(
+  const [{ affectedRows }] = await connection.execute(
     'DELETE FROM StoreManager.products WHERE id = ?',
     [id],
   );
+  return affectedRows;
 };
 
 module.exports = {

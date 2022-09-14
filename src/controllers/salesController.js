@@ -2,14 +2,12 @@ const salesService = require('../services/salesService');
 const errorMap = require('../utils/errorMap');
 
 const registerSale = async (req, res) => {
-  const { type, message } = await salesService.registerSale(req.body);
-  if (type) return res.status(errorMap.mapError(type)).json({ message });
+  const { message } = await salesService.registerSale(req.body);
   return res.status(201).json(message);
 };
 
 const findAll = async (req, res) => {
-  const { type, message } = await salesService.findAll();
-  if (type) return res.status(errorMap.mapError(type)).json({ message });
+  const { message } = await salesService.findAll();
   return res.status(200).json(message);
 };
 

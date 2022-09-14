@@ -60,12 +60,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-09-14T01:17:02.260Z",
-    "modified": "2022-09-14T13:33:55.850Z",
+    "modified": "2022-09-14T21:33:33.298Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "[\r\n  {\r\n    \"productId\": 999,\r\n    \"quantity\": 1\r\n  }\r\n]",
+      "raw": "[\r\n  {\r\n    \"productId\": 1,\r\n    \"quantity\": 1\r\n  },\r\n  {\r\n    \"productId\": 2,\r\n    \"quantity\": 5\r\n  }\r\n]",
       "form": []
     },
     "tests": []
@@ -189,13 +189,19 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/products/999",
-    "url": "localhost:3000/products/999",
-    "method": "PUT",
+    "url": "localhost:3000/products/search?q=Guilherme",
+    "method": "GET",
     "sortNum": 0,
     "created": "2022-09-14T13:34:38.887Z",
-    "modified": "2022-09-14T13:34:38.901Z",
+    "modified": "2022-09-14T20:41:30.108Z",
     "headers": [],
-    "params": [],
+    "params": [
+      {
+        "name": "q",
+        "value": "Guilherme",
+        "isPath": false
+      }
+    ],
     "body": {
       "type": "json",
       "raw": "{\n  \"name\": \"Guilherme\"\n}",
@@ -379,18 +385,13 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/sales/2222",
-    "url": "localhost:3000/sales/2222",
-    "method": "PUT",
+    "url": "localhost:3000/sales/2",
+    "method": "GET",
     "sortNum": 0,
     "created": "2022-09-14T14:47:56.364Z",
-    "modified": "2022-09-14T14:47:56.657Z",
+    "modified": "2022-09-14T19:41:12.070Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n  \"name\": \"Guilherme\"\n}",
-      "form": []
-    },
     "tests": []
   },
   {
@@ -430,6 +431,25 @@
         "isPath": false
       }
     ],
+    "tests": []
+  },
+  {
+    "_id": "c99e5a1e-7ddb-4834-a752-c315a5d9eca7",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales/1",
+    "url": "localhost:3000/sales/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-09-14T21:39:40.306Z",
+    "modified": "2022-09-14T21:40:59.084Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  {\n    \"productId\": 3,\n    \"quantity\": 10\n  }\n]",
+      "form": []
+    },
     "tests": []
   }
 ]

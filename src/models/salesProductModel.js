@@ -32,13 +32,13 @@ const findById = async (id) => {
 };
 
 const updateSaleProduct = async (saleId, productId, quantity) => {
-  const [result] = await connection.execute(
+  const [{ affectedRows }] = await connection.execute(
     `UPDATE StoreManager.sales_products
     SET product_id = ?, quantity = ?
     WHERE sale_id = ? AND product_id = ?`,
     [productId, quantity, saleId, productId],
   );
-  return camelize(result);
+  return affectedRows;
 };
 
 module.exports = {

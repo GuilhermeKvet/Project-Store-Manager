@@ -12,12 +12,12 @@ const registerSale = async (sales) => {
 
 const findAll = async () => {
   const sales = await salesProductModel.findAll();
-  if (!sales) return { type: 'SALE_NOT_FOUND', message: 'Sales not found' };
   return { type: null, message: sales };
 };
 
 const findById = async (id) => {
   const sale = await salesProductModel.findById(Number(id));
+  if (!sale) return { type: 'SALE_NOT_FOUND', message: 'Sales not found' };
   return { type: null, message: sale };
 };
 
