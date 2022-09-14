@@ -278,5 +278,100 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "021b2288-8d44-468a-a218-54a7b2889734",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales/1",
+    "url": "localhost:3000/sales/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-09-14T13:44:22.408Z",
+    "modified": "2022-09-14T14:21:44.449Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e8b6a14c-3b7d-4b6d-adae-9324729778fd",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales/888",
+    "url": "localhost:3000/sales/888",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-09-14T14:07:01.180Z",
+    "modified": "2022-09-14T14:21:39.461Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "218065a6-ffef-4976-be93-63c6b47f1571",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales",
+    "url": "localhost:3000/sales",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-14T14:21:53.952Z",
+    "modified": "2022-09-14T14:21:53.968Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "88f20166-bf58-4ada-8123-e62921bd199d",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales/2",
+    "url": "localhost:3000/sales/2",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-09-14T14:22:03.960Z",
+    "modified": "2022-09-14T14:22:03.975Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "2368f9d8-3f6a-41cb-88c9-c8ddb0989854",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales/2222",
+    "url": "localhost:3000/sales/2222",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-09-14T14:22:08.256Z",
+    "modified": "2022-09-14T14:22:08.270Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Guilherme\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
