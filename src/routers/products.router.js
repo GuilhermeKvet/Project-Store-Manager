@@ -1,7 +1,7 @@
 const express = require('express');
 const { productsController } = require('../controllers');
 const { validateProduct } = require('../middlewares/validateProduct');
-const { validateUpdateProduct } = require('../middlewares/validateSale');
+const { validateUpdateProduct, validateIdProduct } = require('../middlewares/validateSale');
 
 const router = express.Router();
 
@@ -11,6 +11,8 @@ router.post('/', validateProduct, productsController.registerProduct);
 
 router.get('/:id', productsController.findById);
 
-router.put('/:id', validateUpdateProduct, productsController.updateProduct);
+router.put('/:id', validateIdProduct, validateUpdateProduct, productsController.updateProduct);
+
+router.delete('/:id', validateIdProduct, productsController.deleteProduct);
 
 module.exports = router;
