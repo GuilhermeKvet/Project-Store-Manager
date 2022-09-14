@@ -23,6 +23,14 @@ const updateProduct = async (id, name) => {
 
 const deleteProduct = async (id) => {
   await productsModel.deleteProduct(id);
+}; 
+
+const findProduct = async (query) => {
+  const products = await productsModel.findAll();
+  const result = products
+    .filter((product) => product.name.toLowerCase().includes(query.toLowerCase()));
+  if (result.length <= 0) return { type: 'PRODUCT_NOT_FOUND', message: 'Product not found' };
+  return { type: null, message: result };
 };
 
 module.exports = {
@@ -31,4 +39,5 @@ module.exports = {
   registerProduct,
   updateProduct,
   deleteProduct,
+  findProduct,
 };

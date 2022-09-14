@@ -7,9 +7,11 @@ const router = express.Router();
 
 router.get('/', productsController.findAll);
 
-router.post('/', validateProduct, productsController.registerProduct);
+router.get('/search', productsController.findSearch);
 
 router.get('/:id', productsController.findById);
+
+router.post('/', validateProduct, productsController.registerProduct);
 
 router.put('/:id', validateIdProduct, validateUpdateProduct, productsController.updateProduct);
 
