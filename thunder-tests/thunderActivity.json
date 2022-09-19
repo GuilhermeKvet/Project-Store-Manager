@@ -451,5 +451,139 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "5375a0da-e756-4957-992e-7c996aae3244",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/filter/myActivities",
+    "url": "localhost:3000/filter/myActivities",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-19T23:00:20.155Z",
+    "modified": "2022-09-19T23:00:20.228Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6b652f8f-662c-457a-b951-e895b3608cbc",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/filter/myActivities?A fazer",
+    "url": "localhost:3000/filter/myActivities?A fazer",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-19T23:00:33.903Z",
+    "modified": "2022-09-19T23:00:33.914Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "A fazer",
+        "value": "",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "a6c594fe-3fa8-4763-bac1-0a5df95e16ed",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/filter/myActivities?Feito",
+    "url": "localhost:3000/filter/myActivities?Feito",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-19T23:00:48.292Z",
+    "modified": "2022-09-19T23:00:48.304Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "Feito",
+        "value": "",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "ad1c5c6d-d0f8-4074-bfb1-ff67c1ff38a1",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/filter/myActivities?status=Feito",
+    "url": "localhost:3000/filter/myActivities?status=Feito",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-19T23:01:02.323Z",
+    "modified": "2022-09-19T23:01:02.335Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "status",
+        "value": "Feito",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "e075c4ec-be69-4512-ba75-62c44f58be8f",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/filter/myActivities?status=AFazer",
+    "url": "localhost:3000/filter/myActivities?status=AFazer",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-19T23:01:10.299Z",
+    "modified": "2022-09-19T23:01:10.318Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "status",
+        "value": "AFazer",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "bf28e599-ced9-4aba-8c05-ad0764cf040a",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/filter/myActivities?status=A Fazer",
+    "url": "localhost:3000/filter/myActivities?status=A Fazer",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-19T23:01:12.307Z",
+    "modified": "2022-09-19T23:01:12.322Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "status",
+        "value": "A Fazer",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "ba21e170-a4ad-46a3-b2b8-0d7bb034236a",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/filter/myActivities?status=A fazer",
+    "url": "localhost:3000/filter/myActivities?status=A fazer",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-19T23:01:19.823Z",
+    "modified": "2022-09-19T23:01:19.834Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "status",
+        "value": "A fazer",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]
