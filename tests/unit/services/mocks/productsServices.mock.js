@@ -9,10 +9,10 @@ const allProducts = [
   }
 ];
 
-const product = {
+const product = [{
   "id": 1,
   "name": "Martelo de Thor"
-};
+}];
 
 const productUpdate = {
   id: 2,
